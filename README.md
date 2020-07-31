@@ -172,7 +172,7 @@ OBS: ```AS ROTAS A BAIXO NÃO PODEM SER ACESSADAS CASO O USUÁRIO NÃO POSSUA O 
 
 As respostas da API devem ser em formato JSON como nos exemplos acima.
 
-A escrita de testes automatizados é *muito importante*.
+A escrita de testes automatizados é **muito importante**.
 
 Utilize um banco de dados relacional (postgresql, mysql, etc).<br>
 Será observado organização de código, legibilidade e melhor uso dos recursos da linguagem python e padrões do django rest.
