@@ -175,6 +175,6 @@ As respostas da API devem ser em formato JSON como nos exemplos acima.
 A escrita de testes automatizados é **muito importante**.
 
 Utilize um banco de dados relacional (postgresql, mysql, etc).<br>
-Será observado organização de código, legibilidade e melhor uso dos recursos da linguagem python e padrões do django rest.
+Será observado organização de código, legibilidade e melhor uso dos recursos da linguagem python e boa práticas do Django. Como bônus e se sentir a vontade pode fazer uso do biblioteca [Django REST Framework](https://www.django-rest-framework.org/).
 
 Se durante o processo de desenvolvimento não conseguiu fazer algo, explique qual o impedimento que encontrou e como tentou resolver em uma seção `Dificuldades` do seu README.md e nos submite até onde chegou :smile:
