@@ -3,8 +3,12 @@ from django.conf.urls import include
 from rest_framework import routers
 from rest_framework_jwt.views import obtain_jwt_token, refresh_jwt_token,\
     verify_jwt_token
+from apps.api import views
 
 router = routers.DefaultRouter()
+router.register(r'signup', views.UserSignupViewSet, basename='signup')
+router.register(r'projects', views.ProjectViewSet)
+router.register(r'nevers', views.NeverViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),

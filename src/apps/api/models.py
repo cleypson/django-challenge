@@ -6,7 +6,9 @@ from django.db import models
 
 class User(AbstractUser):
     email = models.EmailField(_('email address'), unique=True)
-
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
+    
     class Meta:
         verbose_name = 'User'
         verbose_name_plural = 'Users'
@@ -33,10 +35,10 @@ class Never(models.Model):
         verbose_name_plural = 'Nevers'
 
 
-class Projeto(models.Model):
+class Project(models.Model):
     name = models.CharField('Name', max_length=254)
     nevers = models.ManyToManyField(
-        'Never', verbose_name='Nevers',  related_name='nevers', blank=True)
+        'Never', verbose_name='Nevers', blank=True)
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, blank=True, null=True)
     created_at = models.DateTimeField(

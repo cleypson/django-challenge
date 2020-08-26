@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_filters',
     'rest_framework',
     'rest_framework.authtoken',
     'apps.api',
@@ -139,6 +140,11 @@ REST_FRAMEWORK = {
     'DATE_INPUT_FORMATS': ['iso-8601', "%d/%m/%Y"],
     'DATETIME_FORMAT': "%d/%m/%Y %H:%M:%S",
     'DATETIME_INPUT_FORMATS': ['iso-8601', "%d/%m/%Y %H:%M:%S"],
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
 }
 
 ACCOUNT_USER_MODEL_USERNAME_FIELD = None
